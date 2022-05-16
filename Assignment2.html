@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdYoda | FREE online courses, tutorials to learn programming, technologies</title>
+    <style>
+        body{
+            background-color: aliceblue;
+            margin-bottom:8px ;
+            margin-top: 0px;
+            
+        }
+        a{
+            text-decoration: none;
+        }
+        #topbar{
+            background-color:rgb(235, 248, 248);
+            padding-top: 4px;
+            padding-bottom: 4px;
+            align-items: center;
+            position:sticky;
+            top: 0;     
+            
+        } 
+        #topbar_items1{
+            display: flex;
+            flex-direction: row;   
+        }
+        .logo_items1{
+            width: 12%;
+            flex-direction: row;
+            padding-right: 24px;
+            padding-left: 42px;
+        }
+        .Logo{
+            Width: 130px;
+            font-size: 28px;
+            color: #0084ff;
+            font-weight: bolder;
+            padding-left: 36PX;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .logo_stories{
+            margin: 0px;
+            font-weight: 500;
+            font: Raleway;
+            font-style: italic;
+            color: black;
+            padding-left: 36PX;   
+        }
+        .logo_items2{
+            width: 10%;
+            display: flex;
+            flex-direction: row;
+            padding-top: 20px;
+        }
+        .categories{
+            color: black;
+        }
+        .arrow{
+            width: 90%;
+            padding-left:8px;
+        }
+        #topbar_items2{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .logo_items3{
+            width: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .gotowebsite{
+            color: white;
+            font-weight: bold;
+            margin-top: -42px;
+            margin-right: 78px;
+            margin-left: 48px;
+            padding: 10px 24px 10px 24px;
+            border: 1px solid black;
+            border-radius: 20px;
+            background-color: #0096ff;
+        }
+        .gotowebsite:hover{
+            background-color: #0048ff;
+        }
+        .aboutwebsite{
+            margin-top: -42px;
+            font-size: 18px;
+            opacity: 0.5;
+        }
+        .post_heading{
+            font-size: 36px;
+            margin-left: 15%;
+        }
+        #posts_image{
+            display: flex;
+            flex-direction: row;
+        }
+        .latest_post{
+            margin-left:14.5%; 
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+        .post_img1{
+            margin-left: 35%;
+            width: 640px;
+            height: 520px;
+        }
+        .post_img2{
+            margin-left: 28%;
+            width: 400px;
+            height: 250px;
+            padding-left: 12px;
+        }
+        .post_img3{
+            margin-left: 28%;
+            width: 400px;
+            height: 250px;
+            padding-left: 12px;
+            padding-top: 15px;
+        }
+        #post_image1{
+            display: flex;
+            flex-direction: row;
+            margin-left: 12%; 
+        }
+        .post_img4{
+            width: 2%;
+            height: 2%;
+            margin-top: 16px;
+            margin-left: 2%;
+            padding-right: 4px;
+        }
+        #filter_options{
+            margin-left: 14.5%;
+        }
+        .options{
+            font-size: 14px;
+            line-height: 36px;
+            padding: 5px 16px;
+            border: 1px solid #0084ff;
+            border-radius: 15px;
+        }
+        .options:hover{
+            color: white;
+            background-color: #0084ff;
+        }
+        .menu{
+            margin-left: 180px;
+            margin-right: 80px;
+            margin-top: 40px;
+        }
+        #card1{
+            width: 25%;
+            display: inline-block;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-bottom: 50px;
+            border: 1px solid #0084ff; 
+            border-radius: 10px;
+            z-index: -1;   
+            box-shadow: 2px 2px 5px lightgrey;
+            cursor:pointer;   
+            justify-content: space-evenly;  
+        }
+        #card1:hover{
+            background-color: lightgray;
+        }
+        .card1_image{
+            width: 100%;
+            border-radius: 10px;
+        }
+        .container{
+            margin: 4px 10px;
+            padding: 4px 8px;
+        }
+        .card1_heading{
+            padding:2px ;
+            margin: -15px;
+        }
+        .card1_author{
+            margin: 0px;
+            padding: 2px;
+            display: flex;
+            flex-direction: row;
+            font-size:18px;
+        }
+        .card1_p1{
+            padding-right: 6px;
+        }
+        .card1_p2{
+            width: 100%;
+            height: 260px;
+            color: black;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space:wrap;
+            text-align: left;
+        }
+        .card_button{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            text-align: center;
+            padding: 8px;  
+        }
+        #card2{
+            width: 25%;
+            /* height: 700px; */
+            display: inline-block;
+            margin-left: 30px;
+            margin-right: 30px;
+            border: 1px solid #0084ff; 
+            border-radius: 10px;
+            z-index:-1;   
+            box-shadow: 0 0 12px #ccc;
+            cursor:pointer;   
+            justify-content: space-evenly;   
+            
+        }
+        #card2:hover{
+            background-color: lightgray;
+        }
+        .card2_image{
+            width: 100%;
+            border-radius: 10px;
+        }
+        .container2{
+            margin: 4px 10px;
+            padding: 4px 8px;
+        }
+        .card2_heading{
+            padding:15px ;
+            margin: -15px;
+        }
+        .card2_author{
+            margin: 0px;
+            padding: 2px;
+            display: flex;
+            flex-direction: row;
+            font-size:18px;
+            text-align: left;
+        }
+        .card2_p1{
+            padding-right: 6px;
+        }
+        .card2_p2{
+            width: 100%;
+            height: 260px;
+            opacity: 1;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space:wrap;
+            text-align: left;
+            display: block;
+        }
+        .card2_button{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            text-align: center;
+            padding: 8px;  
+        }
+        #card3{
+            width: 25%;
+            /* height: 700px; */
+            display: inline-block;
+            margin-left: 30px;
+            margin-right: 30px;
+            border: 1px solid #0084ff; 
+            border-radius: 10px;
+            z-index:-1;   
+            box-shadow: 0 0 12px #ccc;
+            cursor:pointer;   
+            justify-content: space-evenly;   
+            
+        }
+        #card3:hover{
+            background-color: lightgray;
+        }
+        .card3_image{
+            width: 100%;
+            border-radius: 10px;
+        }
+        .container3{
+            margin: 4px 10px;
+            padding: 4px 8px;
+        }
+        .card3_heading{
+            padding:28px ;
+            margin: -15px;
+        }
+        .card3_author{
+            margin: 0px;
+            padding: 2px;
+            display: flex;
+            flex-direction: row;
+            font-size:18px;
+            text-align: left;
+        }
+        .card3_p1{
+            padding-right: 6px;
+        }
+        .card3_p2{
+            width: 100%;
+            height: 260px;
+            opacity: 1;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space:wrap;
+            text-align: left;
+        }
+        .card3_button{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            text-align: center;
+            padding: 8px;  
+        }
+        #card4{
+            width: 25%;
+            /* height: 700px; */
+            display: inline-block;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-bottom: 10px;
+            border: 1px solid #0084ff; 
+            border-radius: 10px;
+            z-index:-1;   
+            box-shadow: 0 0 12px #ccc;
+            cursor:pointer;   
+            justify-content: space-evenly;   
+            
+        }
+        #card4:hover{
+            background-color: lightgray;
+        }
+        .card4_image{
+            width: 100%;
+            border-radius: 10px;
+        }
+        .container4{
+            margin: 4px 10px;
+            padding: 4px 8px;
+        }
+        .card4_heading{
+            padding:30px ;
+            margin: -15px;
+        }
+        .card4_author{
+            margin: 0px;
+            padding: 2px;
+            display: flex;
+            flex-direction: row;
+            font-size:18px;
+        }
+        .card4_p1{
+            padding-right: 6px;
+        }
+        .card4_p2{
+            width: 100%;
+            height: 260px;
+            opacity: 1;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space:wrap;
+            text-align: left;
+        }
+        .card4_button{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            text-align: center;
+            padding: 8px;  
+        }
+        .menu5{
+            margin-left: 180px;
+            margin-right: 80px;
+            margin-top: 40px;
+        }
+        #card5{
+            width: 25%;
+            /* height: 700px; */
+            display: inline-block;
+            margin-left: 30px;
+            margin-right: 30px;
+            border: 1px solid #0084ff; 
+            border-radius: 10px;
+            z-index:-1;   
+            box-shadow: 0 0 12px #ccc;
+            cursor:pointer;   
+            justify-content: space-evenly;   
+            
+        }
+        #card5:hover{
+            background-color: lightgray;
+        }
+        .card5_image{
+            width: 100%;
+            border-radius: 10px;
+        }
+        .container5{
+            margin: 4px 10px;
+            padding: 4px 8px;
+        }
+        .card5_heading{
+            padding:28px ;
+            margin: -15px;
+        }
+        .card5_author{
+            margin: 0px;
+            padding: 2px;
+            display: flex;
+            flex-direction: row;
+            font-size:18px;
+            text-align: left;
+        }
+        .card5_p1{
+            padding-right: 6px;
+        }
+        .card5_p2{
+            width: 100%;
+            height: 260px;
+            opacity: 1;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space:wrap;
+            text-align: left;
+        }
+        .card5_button{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            text-align: center;
+            padding: 8px;  
+        }
+        #card6{
+            width: 25%;
+            /* height: 700px; */
+            display: inline-block;
+            margin-left: 30px;
+            margin-right: 30px;
+            border: 1px solid #0084ff; 
+            border-radius: 10px;
+            z-index:-1;   
+            box-shadow: 0 0 12px #ccc;
+            cursor:pointer;   
+            justify-content: space-evenly;   
+            
+        }
+        #card6:hover{
+            background-color: lightgray;
+        }
+        .card6_image{
+            width: 100%;
+            border-radius: 10px;
+        }
+        .container6{
+            margin: 4px 10px;
+            padding: 4px 8px;
+        }
+        .card6_heading{
+            padding:15px ;
+            margin: -15px;
+        }
+        .card6_author{
+            margin: 0px;
+            padding: 2px;
+            display: flex;
+            flex-direction: row;
+            font-size:18px;
+            text-align: left;
+        }
+        .card6_p1{
+            padding-right: 6px;
+        }
+        .card6_p2{
+            width: 100%;
+            height: 260px;
+            opacity: 1;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space:wrap;
+            text-align: left;
+        }
+        .card6_button{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            text-align: center;
+            padding: 8px;  
+        }
+        #footer{
+            background-color: #172146;
+            height: 600px;
+            margin-top: 50px;
+            margin-bottom: 2px;
+        }
+        .footer_items{
+            
+            display: inline-block;
+            color: hsla(0,0%,100%,.5);
+            margin-left: 180px;
+            margin-top: 20px;
+        }
+        .footer_email_logo{
+            display: flex;
+            flex-direction: row;
+        }
+        .footer_options{
+            color: white;
+            
+        }
+        .footer_email{
+            width: 25px;
+        }
+        .footer_logos{
+            display: inline-block;
+        }
+        .footer1_options{
+            color: white;
+            position: relative;
+            top: 76px;
+        }
+        .footer1_heading{
+            position: relative;
+            top: 76px;
+        }
+        .footer_p{
+            color: white;
+        }
+        </style>
+</head>
+<body>
+    <header id="topbar">
+        <nav>
+            <div id="topbar_items1">
+                <div class="logo_items1">
+                    <a href="#EDYODA"><span class="Logo">EDYODA</span></a><br>
+                    <a href="#Stories"><span class="logo_stories">Stories</span></a>
+                </div>
+                <div class="logo_items2">
+                    <a href="#Explore Categories"><Span class="categories">Explore Categories</Span></a>
+                    <a href="/"><img class="arrow" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAGCAYAAAD37n+BAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAHhJREFUeNpiYGBguAPE/f///2fAh0FqgPguiBEDxC+BeDUQM2NRyAyVewlWCxW0B+L7QHwAiHmRFPNCxUBy9mAxJElVIL4MxBeBWB6KL0LFVOHq0KwXAuJDQHwPikFsIWQ1jFCFcMDIyMgGpFZAuRFA+V/I8gABBgD8EGd4shdx5wAAAABJRU5ErkJggg==" alt="arrow"></a>
+                </div>
+            </div>
+            <div id="topbar_items2">
+                <div class="logo_items3">
+                    <a href="#Go To Main Website"><p class="gotowebsite">Go To Main Website</p></a>
+                    <p class="aboutwebsite">EdYoda is free learning and knowledge <br>
+                            sharing platform for techies</p>
+                </div>
+            </div>
+        </nav>     
+    </header>
+    <section>
+        <h1 class="post_heading">Trending Posts</h1>
+        <div id="posts_image"> 
+            <a href="/"><img class="post_img1" src="https://edyoda.s3.amazonaws.com/media/blog-images/ace-soft-skills-small.jpg" alt="post img"></a>
+            <div>
+                <a href="/"><img class="post_img2" src="https://edyoda.s3.amazonaws.com/media/blog-images/aptitude-small.jpg" alt="post img"></a>
+                <a href="/"><img class="post_img3" src="https://edyoda.s3.amazonaws.com/media/blog-images/learn_cloud_computing.jpeg" alt="post img"></a>
+            </div>
+        </div>
+        <h2 class="latest_post">Latest Posts</h2> 
+        <div id="post_image1">
+            <img class="post_img4" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAMAAABHPGVmAAAAbFBMVEUAAAA1gME1gME1f8A1gME1gMExd7Q0f8AxeLYzfb00fr80f8Aze7oze7o1gMA0fr4zfLwzfb0zfb0yerg0fb00f8AzfLszfLwzfr40f780f8Azfb00f8A0f8AzfLwzfr81gME0fr4zfLs1gMEkRxAZAAAAI3RSTlMAHOP9f/oT1RAO281OROfhFaSUSkCwnpmOcTfFim9YB/AmGRclE4kAAAF9SURBVGje7dfrboJAEAXgA7jLXRAExRu2vP87No1NJjYpexm3SZv5/vgD9QB7mCwQQggh/rI2YtCwUpUxw7mGhTZdWMoWZlHMC4kjmL0Xv3Al8zHhZCQTbOid159/fRwyWIlK+p2rQcPSvnBLoa+mJ1jrG7+bVdRwcLsvHpoeLuaLepxh4nAd9xvc5F1ityx0Juoyw5EeXZely2DAL/JOw8M+NafQ4TKCl7pxeED28FRtrctbw9uk1u4YHdhW8Jd39LislXcCRzZalEt1OVj0YF76MQPTyVjkQYOtprlvmO4cfbysoOnOc6UiG6Y7Q36kIn8v7xWvkh1+mPvqmIPBtIExb0385z5/ups3MM+2b3ixi3nXy7eREAmREAmREAmRkPWQsw4Xkiz05hMqJEkoI0wIZTQVEC7k8VH0CGDztB5pDRKkXfTWHjJkOMGAX+Fdi0CowqMGCROiDpQRKkR1GcLZ0PtbODf1OUquOULKpzQ+VwitjTIIIYQQ/9wHYyfu5wm8dM0AAAAASUVORK5CYII=" alt="">
+            <h4>Filter by Category</h4>
+        </div>
+        <div id="filter_options">
+            <a href="#All"><span class="options">All</span></a>
+            <a href="#Artificial Intelligence"><span class="options">Artificial Intelligence</span></a>
+            <a href="#Cloud Computing"><span class="options">Cloud Computing</span></a>
+            <a href="DevOps"><span class="options">DevOps</span></a>
+            <a href="#Programming Languages"><span class="options">Programming Languages </span></a>
+            <a href="#Mobile Application Development"><span class="options">Mobile Application Development</span></a>
+            <a href="#Technology and Tools"><span class="options">Technology and Tools</span></a><br>
+            <a href="#Get a Job in a Tech Company"><span class="options">Get a Job in a Tech Company</span></a>
+            <a href="#Others"><span class="options">Others</span></a>
+        </div> 
+        <div class="menu">
+            <div id="card1">
+                <img class="card1_image" src="https://edyoda.s3.amazonaws.com/media/blog-images/7_reasons_to_learn_Python_u3lFION.jpg" alt="Fresh Graduate">
+                <div class="container">
+                    <div class="card1_heading">
+                        <h1>Fresh Graduate or IT professional Looking for a job ? - 7 reasons to learn Python NOW!</h1>
+                    </div>
+                    <div class="card1_author">
+                        <a href="#card1_author"><p class="card1_p1"> Arman Ahmed</p> </a>
+                        <p>| 05 July 2019</p>
+                        
+                    </div>
+                    <div>
+                        <p class="card1_p2"> 
+                            If you are a fresh graduate - or new to IT - looking for the next job, you need to read this.
+                            
+                            The last couple of years zekeLabs gave me a unique opportunity to assess technology demand in the industry and also to evaluate available talent pool for the demand.
+                            
+                            Our consulting and technology training assignments for our corporate partners enlightened us on the technology skill in demand. We discovered - What, Where and which technologies are increasingly being adopted by the Industry.
+                            
+                            Our interaction with the engineering graduates and IT professionals during the technology workshops, seminars and our technology skilling initiatives, We found out the current tech skill-sets of the millennial generation and the skill gap.
+                            
+                            We have interacted with hundreds and thousands of engineering graduates, all looking for quick jobs. In all our interactions one question that has remained constant was -
+                            
+                            " There are a number of them (sic. technologies), which one should I learn to get a job as soon as possible. "
+                            And invariably and more often than not my answer has been -
+                            
+                            “ If you are new to programming, start by learning PYTHON programming. You can not go wrong with it. Explore further possibilities based on your interest. “
+                            This is an attempt to demystify the answer on why I recommend a learning pathway that starts with Python and how learning Python can give the engineering graduates and IT professionals a solid foundation for successful career ahead.</p>
+                    </div>
+                    <div class="card_button">
+                        <button>Read More..</button>
+                    </div>
+                </div>
+            </div> 
+            <div id="card2">
+                <img class="card2_image" src="https://edyoda.s3.amazonaws.com/media/blog-images/devops-edYoda-blog-small.jpg" alt="Fresh Graduate">
+                <div class="container2">
+                    <div class="card2_heading">
+                        <h1>From identity crisis to the Success Story - The DevOps revolution!</h1>
+                    </div>
+                    <div class="card2_author">
+                        <a href="#card2_author"><p class="card2_p1">Kalyan Mahalingam</p> </a>
+                        <p>| 05 July 2019</p>
+                        
+                    </div>
+                    <p class="card2_p2">DevOps is a paradigm shift in the way how software products are being built in the modern day Information Technology (IT) organizations. It is becoming the de-facto component in Software Development Lifecycle (SDLC) process in most of the organizations.
+
+                        But what is this all about. Here, I am exploring how DevOps can be compared to some of the similar revolutions of the past and how it is impacting the work culture in the organizations.
+                        
+                        But before I dig deeper, let’s understand what DevOps truly is - DevOps can simply be defined as the “combination of cultural philosophies, practices, and tools that increases an organization’s ability to deliver applications and services at high velocity”.
+                        
+                        DevOps is not restricted to any set of processes and tools, but is more rightly represented by the culture of enhanced communication and collaboration between Infrastructure and system operations guys and developers guided by principles and philosophies of DevOps such as Continuous Integration (CI), Continuous Delivery (CD), Infrastructure as Code, Automation and other similar practices. The different components of DevOps include - Source Code Management, Automated Build and Test System, Automated Deployments, Infrastructure Orchestration tools and many other tools and processes.
+                        
+                        If all this sounds alien, I would recommend you to watch this video by my friend and colleague here . He has talked about the DevOps philosophy and the technology in use in some of his amazing DevOps Course Videos.
+                        
+                        From CMMI & the Agile world to the DevOps era - 
+                        Many Businesses have long formed the Power organizations or hierarchies and there are success stories based on those hierarchies. Organizations do not want to change or revamp their hierarchies for the only reason that technology is changing at a fast pace. Though not a huge supporter of the thought process, but I understand the school of thoughts behind the decisions. It is definitely a difficult transition.
+                        
+                        From the Business side, it needs a strong commitment and conviction to shake their organization, but on the other hand, technology or the process in question needs to be strong enough to make them rethink and revamp.
+                        
+                        Often we do not see such ground shaking experiences happening, as technologies mostly remain agnostic to the structure of the organization. A quick analogy can be drawn with cricket.
+                        </p>
+                        <div class="card2_button">
+                            <button>Read More..</button>
+                        </div>
+                </div>
+            </div>
+            <div id="card3">
+                <img class="card3_image" src="https://edyoda.s3.amazonaws.com/media/blog-images/cloud-meetup-edyoda-small_b2EXhBe.jpg" alt="Fresh Graduate">
+                <div class="container3">
+                    <div class="card3_heading">
+                        <h1>edYoda Meetup #01 : A Date with Cloud</h1>
+                    </div>
+                    <div class="card3_author">
+                        <a href="#card3_author"><p class="card3_p1"> Ashish Pandey</p> </a>
+                        <p>| 05 July 2019</p>
+                        
+                    </div>
+                    <p class="card3_p2">Being a Cloud and DevOps evangelist, it is my job to talk to engineers and managers about the features and future of the cloud.
+
+                        Now when I talk to any beginner on cloud and ask them about “ what do you understand about the cloud? ”, the first reaction is most often on the lines of “ some place where we keep our data, that can be accessed from anywhere”. Now that is correct to its own limited context even though not sufficient.
+                        
+                        This indicates 2 main points -
+                        
+                        One people relate to cloud computing more with data storage than compute service.
+                        
+                        People relate cloud more as Infrastructure as a service (IAAS) than Platform as a Service (PAAS).
+                        
+                        My initial plan was to make it a generic meetup that offered something to everyone starting from a newbie beginner to the advanced practitioners.
+                        
+                        As I discussed this further with my colleague Armaan he suggested making the meetup a little more specific so that it should not become just a networking exercise but it should add value to everyone who attends it.
+                        
+                        From my discussion with the cloud experts and cloud wannabe, I knew that one of the most pertinent questions about the cloud is AWS vs Azure. Each of them has its own pros and cons.
+                        
+                        On one hand, we have AWS, the undisputed leader in the cloud market, on the other hand, we have Azure one of the fastest growing cloud service provider growing at close to 100% YoY growth rate. So we zeroed in on one session to data storage and database services on AWS and Azure.  But this becomes too generic a comparison.
+                        
+                        So we decided another session to be specific about Data Migration on Cloud.</p>
+                        <div class="card3_button">
+                            <button>Read More..</button>
+                        </div>
+                </div>
+            </div>
+            <div id="card4">
+                <img class="card4_image" src="https://edyoda.s3.amazonaws.com/media/blog-images/7.png" alt="Fresh Graduate">
+                <div class="container4">
+                    <div class="card4_heading">
+                        <h1>Importance of Data Backup and Recovery in the IT industry</h1>
+                    </div>
+                    <div class="card4_author">
+                        <a href="#card4_author"><p class="card4_p1">EdYoda</p> </a>
+                        <p>| 26 Aug 2019</p>
+                        
+                    </div>
+                    <p class="card4_p2"> A business must always introspect the areas where they lack in order to bring about a positive change in the work environment. One of the main precautions or a contingency plan that is necessary for every business and especially industries working with clouds, networks and computers should conduct a backup of its files which will serve as a boon in any point of time. 
+
+                        Before moving forward, let us understand the concept of Data Backup and Recovery.
+                        
+                        Backup is the process of creating and storing copies of data that is confidential to the organization against the data loss or in case of emergency. Recovery is the process that involves restoring the lost data to the original location or another location. It is essential to have a proper backup copy in a separate system. It is the duty of every employee to keep the data structured and backed up in a separate storage device and not to hand it over to somebody else as it has confidential information.</p>
+                        <div class="card4_button">
+                            <button>Read More..</button>
+                        </div>
+                </div>
+            </div> 
+            <div id="card5">
+                <img class="card5_image" src="https://edyoda.s3.amazonaws.com/media/blog-images/MicrosoftTeams-image_1.png" alt="Fresh Graduate">
+                <div class="container5">
+                    <div class="card5_heading">
+                        <h1>From identity crisis to the Success Story - The DevOps revolution!</h1>
+                    </div>
+                    <div class="card5_author">
+                        <a href="#card5_author"><p class="card5_p1">EdYoda</p> </a>
+                        <p>| 01 Mar 2022</p>
+                        
+                    </div>
+                    <p class="card5_p2">Ever since 2019, after a solid hit from the falling rate of economic growth, the job market seems to be challenging. With the technology-enabled disruption continuing to play its part, companies are becoming far more discerning in terms of hiring. Their focus has now shifted towards making the best use of the available human resources. 
+
+ 
+
+                        More and more companies are preferring to hire skilled employees. This helps them save critical time and costs during and after the hiring process. They are interested in hiring professionals with core skill sets in technological areas. This calls for upskilling and reskilling. However, good quality training programs are mostly expensive. 
+                        
+                         
+                        
+                        While quality comes at a cost, the mission at EdYoda is to enable affordable access to skills and opportunities. This indeed keeps us going and motivated for work. All India Technical Employability Skill Test is an online assessment conducted to evaluate if you are the right fit for the technical role is ever evolving IT industry. AITEST evaluates you on  problem solving, abstract thinking, critical thinking, logical reasoning & data interpretation skills which are essential for one’s success in the technology domain.</p>
+                        <div class="card5_button">
+                            <button>Read More..</button>
+                        </div>
+                </div>
+            </div>
+            <div id="card6">
+                <img class="card6_image" src="https://edyoda.s3.amazonaws.com/media/blog-images/6.png" alt="Fresh Graduate">
+                <div class="container6">
+                    <div class="card6_heading">
+                        <h1>LAMP Stack Vs MEAN stack: Choosing the right platform for your web application development</h1>
+                    </div>
+                    <div class="card6_author">
+                        <a href="#card6_author"><p class="card6_p1">EdYoda</p></a>
+                        <p>| 24 Aug 2019</p>
+                        
+                    </div>
+                    <p class="card6_p2">In today’s dynamic world, rapid web application development with a smooth user interface that can adapt to specific features is the main business requirement. Many organizations around the world that intensely depend on programming for their everyday business operations, the big business level applications, sites and servers have become apparent. It is important to use consistent, scalable and standardized software when developing a new application.
+
+                        A web stack is a collection of software that is used to build a web application. Many E-commerce platforms like Amazon, Walmart and eBay provide the best user experience which is one of the reasons why they maintain their position at the top. Currently, the most popular web stacks are: LAMP stack and MEAN stack.
+                        
+                        Let us try to understand more about these web application development platforms.</p>
+                        <div class="card6_button">
+                            <button>Read More..</button>
+                        </div>
+                </div>
+            </div>
+        </div>       
+    </section>
+    <footer>
+        <div id="footer">
+            <div class="footer_items">
+                <h3>Edyoda</h3>
+                <div class="footer_options">
+                    <a href="/"><p class="footer_p">About Us</p></a>
+                    <a href="/"><p class="footer_p">Contact Us</p></a>
+                    <a href="/"><p class="footer_p">Terms of Use</p></a>
+                    <a href="/"><p class="footer_p">Privacy Policy</p></a>
+                </div>
+            </div>
+            <div class="footer_items">
+                <h3>RESOURCES</h3>
+                <div class="footer_options">
+                    <a href="/"><p class="footer_p">Learning Paths</p></a>
+                    <a href="/"><p class="footer_p">Courses</p></a>
+                    <a href="/"><p class="footer_p">Learning Videos</p></a>
+                    <a href="/"><p class="footer_p">EdYoda Stories</p></a>
+                </div>
+            </div>
+            <div class="footer_items">
+                <h3>FOR ENTERPRISES</h3>
+                <div class="footer_options">
+                    <a href="/"><p class="footer_p">Train Your Employees</p></a>
+                    <a href="/"><p class="footer_p">Certification</p></a>
+                    <a href="/"><p class="footer_p">Affiliate Progam</p></a>
+                    <a href="/"><p class="footer_p">Learn and Earn</p></a>
+                </div>
+            </div>
+            <div class="footer_items">
+                <h3 class="footer1_heading">CONNECT</h3>
+                <div class="footer1_options">
+                    <a href="/"><p class="footer_p">2nd Floor #188, Survey No. - 123/1,<br>
+                        Incubes Building Next to McDonalds,<br>
+                        ITPL Main Rd, Brookefield,<br>
+                        Bengaluru, Karnataka-560037,<br>
+                        India.</p></a>
+                    <div class="footer_email_logo">
+                        <img class="footer_email" src="https://www.edyoda.com/static/media/email-white.e7d51381.svg" alt="email">
+                        <a href="/"><p class="footer_p">hello@edyoda.com</p></a>
+                    </div>
+                    <a href="#footer_logos"><div class="footer_logos">
+                        <img style="width: 25px; padding: 2px;" src="https://www.edyoda.com/static/media/location-pin.de95721a.svg" alt="location">
+                        <img style="width: 20px;padding: 2px;" src="https://www.edyoda.com/static/media/twitter-white-icon.ea27ab22.svg" alt="twitter">
+                        <img style="width: 10px;padding: 2px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAqCAYAAAC+5wuXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAMlJREFUeNpi/P//PwMewAzEPkDsBcRWQKwIxNxYVYIMwoG1gPjCfyIBCw6XqAPxQSAWYSASMGERYwTiBaQYgssgWyC2YCARYDMolIEMgM0gc3IMwhbYSgT0XATiTiB+AsTf4AGLJR39AmJWPAZpAvENjBjCYtB/Ai4CJdJ/xIQRIfCP2MBmoFas4QPf8MWaCwkG/celHhTY/6ngs/fUCqMX1DLoGbUMej6MvcYCLRGJzWsfgVhgUGWRUYNGDRo1aNSgUYNIBgABBgDTamTg3XAChAAAAABJRU5ErkJggg==" alt="fb">
+                        <img style="width: 25px;padding: 4px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACE1BMVEUAAAD//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f3//f0AAACS7nrlAAAAr3RSTlMAARIiEydtsub757RvKUO+wEIauRXp4zb68i0q7+AWAs+oX/4z4bM3+Q2FVb+R2LDxzvXV3b3EpJJxRyMH8NN7VgrJTP3zd4JaTtoUifTiamucBiU7UVsyGwwdL0BKIQtUjsj435dQJGAOaXkxEJ2D97w8sURn/GK7gZumBLp6Qbjlt262tQPGOJ6KhqDRD+oZra+WkK6HzKwomaua9o2qgJ+pOcPkp9KlfaNwoqER3P6g3gAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfiCwQRLRRI/vG6AAADvElEQVR42u3a+TsUYQAH8HfLteQuqWRJISo3hRK2U22HDhRJCB1CETolXZJSoUv3Xe+/WPJsz66d9zvzjnnfeR6735/fd76fPWfmnZcQX1xjWbDQz2JWuX9AYJCVUmoNDlkUKr8+LJy6JiJSbn2Ue/10ohfLfPlLqGdilkrrj4ylSlm2XFL/ijiqnJXxUvptCZSVRCmAVcx+mrRaQr9lDRtAkyUAUkA/TV0rHpCGADRdPGAdBKwXD9gAARniAZkQkCUekA0BOeIBuRCQJx6QDwEF4gEbIWCTeEAhBBSJBxRvBv1bxPcTUgIAW2UASoOY/WVyrpDL7Yz+bbIuibYr99vLJfUTsiNJoT97p7R+QnZ5/hR2y3r/Z1KxZ69bvWNfsdT+v4nfn+w8LzkOpB+UXf8vxZWHDh8pPFplSrkvvvjii5BU1xw7XptSd8KM7qj6kw2n/p9YG8uampn3uadb2Jl1Sihkj3RbVWtty/I8vcdGnDmrCGgB14Tn3IeCG1mXm8i688y7rYbIuQHCNQBK2y+AA9KOlLkA8tQBnQ6qki5/kYBm+PJnknlRN6BDDXCpW72fUmuPXsBlFUCvlvrppFlEAGx9Wvsp7b+iC3AVAq5p76e0XRcgGgE6NX3+ztiv6wHcAAC/GJ5+Sm9WGAvoCuHrpzRQB2CAPTKOcucWP2CQvwUks5UbcNtQgHMByjxA4xAvgPuLppJ6XkCywYA7ZgPoXU5AoNGAe5yALm2HdQze7wl4MPxQfWQuJyBDQ3tC7YhzeGjvI7XRo0YDgntsrhPiH6uMr+cDPFHrH6smsxKAJzzlAzxT6e8jnnkOZ4zzAVTe0IkhBYAFfnO7qw0ERCiv7FVa0aQwLsAEfDGTRDkv0Kw2LsBLdKhXjH5ShGaVGAZ4HcUCEPSP9IYLMAWGjjH7yVsw7R0X4D0YCp4yfwDTurgAiWDoKBtQBaZ9NArwid1PhuzseTlcgM/skV8AgLCfStFgLkA/e2Q+Aoyz56UaBRhAAPRvzAX4yh4JNxo0GQUo0An4ZhTgu07Aj3kD+Gk24JfZgGEfwGyA6d8B038Fpv8PmA7Qey4wDKD3bGgYAFwPyAGASzI5AHBR6iUAcGMiBzBlNgDcnMoBgPUBOQCwQuIlALBKJgcA1gnlADLMBoCbTDkAsFzvJQDwxEQOADy0kgMAj+3kAMCTUzkA8OzYSwBo/4AUANxBIQOA95BIAKht4xEOUN3INO8BGjaziQWEmw3QtqGRFzAyyY7N/UA17JFwS/5vUEG8Pn8AAeaBBm01AhgAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMTEtMDRUMTc6NDU6MjArMDE6MDDpm7GmAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTExLTA0VDE3OjQ1OjIwKzAxOjAwmMYJGgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAASUVORK5CYII=" alt="linkedin">
+                    </div></a>    
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
